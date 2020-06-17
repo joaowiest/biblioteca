@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loguin</title>
+</head>
+<body>
+    <h1>Login aqui</h1>
+    <form method="POST">{% csrf_token %}
+        <input type="text" name="username" placeholder="nome"> <br>
+        <input type="text" name="password" placeholder="senha"> <br>
+        <button type="submit">Login</button>
+    </form>
+    <br>
+    <a href="{% url 'cadastro' %}">Ir para o cadastro</a>
+    <span>{{ email }}</span>
+</body>
+</html>

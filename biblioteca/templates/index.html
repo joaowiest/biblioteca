@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>livraria</title>
+</head>
+<body>
+    <h1>Bem vindo a livraria </h1>
+    <a href="{% url 'logout' %}">Logout</a><br>
+    {% for livro in livros %}
+        {{livro.nome_livro}} --> {{livro.quantia_livro}}   <a href="{% url 'emprestimo' livro.id %}">emprestimo</a> , <a href="{% url 'devolucao' livro.id %}">devolução</a><br>
+    {% endfor %}
+</body>
+</html>
